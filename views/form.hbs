@@ -1,0 +1,126 @@
+<head>
+    <script>
+        function contar(val){
+            location.href="/teste2/"+document.getElementById("idvalor").value;
+        }
+    </script>
+
+<style> 
+ div{ 
+ widht: 100px; 
+ heght: 100px; 
+ display: flex; 
+ margin: 2px; 
+ justify-content: center;
+ 
+ } 
+ #div1 { 
+ } 
+ #div2 { 
+ } 
+
+ </style> 
+
+<style>
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+th, td {
+  border-color: #96D4D4;
+}
+
+</style>
+
+</head>
+
+<center>
+<img src="/img/download.png" width="1080"height="180">
+<h2>Venha fazer parte da nossa rede de ajuda!!</h2><br>
+</center>  
+
+ <div id="div1"> 
+ <form action="/cuidador/salvar" method="POST"> 
+ <fieldset> 
+     <legend><h4>Realize seu cadastro</h4></legend> 
+     
+     <label>Nome:</label></br> 
+     <input type="text" name="nome" value=""/> </br>  
+  
+     <label>Qualificação Profissional:</br> 
+           <input type="text" name="quali" list="country-names" value=""/></br> 
+           <datalist id="country-names"> 
+             <option label="Enfermeiro(a)" value="Enfermeiro(a)"></option> 
+             <option label="Técnico(a) de Enfermagem" value="Técnico(a) de Enfermagem"></option> 
+	     <option label="Cuidador(a)" value="Cuidador(a)"></option>
+           </datalist> 
+     </label> 
+
+     <label>Cidade:</label></br> 
+     <input type="text" name="cidade" value=""/></br>
+      
+     <label>Contato:</label></br> 
+     <input type="text" name="contato" value=""/></br></br>      
+  
+     <center><input type="submit" value="Salvar"/></center> 
+ </fieldset> 
+ </form> 
+ </div> 
+<br><br><br><br>
+
+
+
+
+<center>
+<h2>Não perca tempo, encontre um profissional perto de você!<br></h2>
+</center> 
+  
+ <div id="div2"> 
+<form action="/cuidador/listar" method="POST">
+ <fieldset> 
+     <legend><h4>Busque um profissional</h4></legend> 
+     <label>Cidade:</label></br> 
+     <input type="text" name="key" value="{{cidade}}"/></br></br> 
+  
+     <center><input type="submit" value="Buscar"/> </center>
+
+
+ </fieldset> 
+ </form> 
+ </div>
+<br>
+
+  
+<center>
+    <table style="width:50%">
+        <th>Nome</th>
+        <th>Qualificação Profissional</th>
+        <th>Cidade</th>
+        <th>Contato</th>
+        {{#each data}}
+        <tr>
+            <td>
+                {{nome}}
+            </td>
+            <td>
+                {{quali}}
+            </td>
+            <td>
+                {{cidade}}
+            </td>
+            <td>
+                {{contato}}
+            </td>
+        </tr>
+         {{/each}}
+    </table>
+ </center>        
+             
+       
+    </ul>
+
+</form>
+
+<br><br><br><br>
+
