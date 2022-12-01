@@ -6,7 +6,7 @@ const axios = require('axios').default;
 
 const api = axios.create({
   //baseURL: "https://cuidadorb.azurewebsites.net",
-  baseURL: "http://localhost:3000",
+  baseURL: "https://cuidadorb.azurewebsites.net",
 });
 
 module.exports = api;
