@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'cuidadorf'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_DC6381A5ABF94AA0BBEDF08E8E4A0A43 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D98C14A1508E4A139434DC01883B692F }}
           package: .
