@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'CuidadorII'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_945F6BB06FE1409CB679D3D7F6D52C28 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_320FFE05FD424839A364CC6E169C9688 }}
           package: .
